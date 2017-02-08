@@ -39,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Supplier X - January 2017</a>
+        <a class="navbar-brand" href="#"><img src="images/hmrc-logo.png" alt="HMRC Logo">Joint Partnership Dashboard</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
         <ul class="nav navbar-nav navbar-right">
@@ -50,138 +50,107 @@
   </nav>
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <ul class="breadcrumb">
-    <li><a href="supplier-dashboard.html">Dashboard</a></li>
+    <li><a href="supplier-select.html">Capgemini</a></li>
+    <li><a href="supplier-dashboard.html">January 2016 Dashboard</a></li>
     <li class="active">Contract Management</li>
   </ul>
   <h3>Contract Management</h3>
-  <h5>Respect and comply with the agreement achieved under the contract and ensure if continues to evolve.</h5>
-  <h5>The governance and ongoing stewardship of the contract is being professionally managed and supports service delivery/development</h5>
-  <br>
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Responsiveness
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">
-          <h6>Responsiveness of commercial processes</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="ccns">Unapproved CCN's over x days old:</label>
-                  <input type="text" class="form-control" id="ccns">
-                  <label for="disputes">Unapproved CCN's over x days old:</label>
-                  <input type="text" class="form-control" id="disputes">
-                </div>
+  <p class="lead">Respect and comply with the agreement achieved under the contract and ensure if continues to evolve.</p>
+  <p class="lead">The governance and ongoing stewardship of the contract is being professionally managed and supports service delivery/development</p>
+  <div class="well bs-component">
 
-              </fieldset>
-            </form>
+    <form class="form-horizontal scores">
+
+      <fieldset>
+        <legend>Responsiveness</legend>
+        <p class="lead">Responsiveness of commercial processes</p>
+        <div class="form-group">
+          <label for="i1_1" class="col-lg-4 control-label">Unapproved CCN's over 5 days old</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i1_1" placeholder="0">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-             aria-controls="collapseTwo">
-            Value For Money
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-        <div class="panel-body">
-          <h6>Mechanisms in place and outcomes being tracked</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="bench">Progress against benchmarking program plan:</label>
-                  <input type="text" class="form-control" id="bench">
-                  <label for="comp">Expert review compliance and actions tracker:</label>
-                  <input type="text" class="form-control" id="comp">
-                </div>
-              </fieldset>
-            </form>
+        <div class="form-group">
+          <label for="i1_2" class="col-lg-4 control-label">Unapproved CCN's over 10 days old</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i1_2" placeholder="0">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingThree">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-             aria-controls="collapseThree">
-            Efficiency
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-        <div class="panel-body">
-          <h6>Efficient billing process in place and billing is timely and accurate, with few instances of errors</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="unbilled">£ value of unbilled but approved items:</label>
-                  <input type="text" class="form-control" id="unbilled">
-                  <label for="dispute">£ value of items in dispute:</label>
-                  <input type="text" class="form-control" id="dispute">
-                  <label for="debtor">Debtor days against contract:</label>
-                  <input type="text" class="form-control" id="debtor">
-                </div>
-              </fieldset>
+      </fieldset>
 
-            </form>
+      <fieldset>
+        <legend>Value for money</legend>
+        <p class="lead">Mechanisms in place and outcomes being tracked</p>
+        <div class="form-group">
+          <label for="i2_1" class="col-lg-4 control-label">Progress against benchmarking program plan</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i2_1" placeholder="0">
           </div>
+        </div>
+        <div class="form-group">
+          <label for="i2_2" class="col-lg-4 control-label">Expert review compliance and actions tracker</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i2_2" placeholder="0">
+          </div>
+        </div>
+      </fieldset>
 
+      <fieldset>
+        <legend>Efficient</legend>
+        <p class="lead">Efficient billing process in place and billing is timely and accurate, with few instances of errors</p>
+        <div class="form-group">
+          <label for="i3_1" class="col-lg-4 control-label">Value of unbilled but approved items</label>
+          <div class="col-lg-8 input-group">
+            <div class="input-group-addon">&pound;</div>
+            <input type="text" class="form-control" id="13_1" placeholder="0.00">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="i3_2" class="col-lg-4 control-label">Value of items in dispute</label>
+          <div class="col-lg-8 input-group">
+            <div class="input-group-addon">&pound;</div>
+            <input type="text" class="form-control" id="13_2" placeholder="0.00">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="i3_3" class="col-lg-4 control-label">Debtor days against contract</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i3_3">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Summary</legend>
+        <p class="lead">Overall score for Capgemini</p>
+        <div class="form-group rag-status">
+          <label for="ragStatus" class="col-lg-4 control-label">Value of unbilled but approved items</label>
+          <div class="col-lg-8">
+            <select class="form-control" id="ragStatus">
+              <option class="rag-status-blue">Blue</option>
+              <option class="rag-status-green">Green</option>
+              <option class="rag-status-amber">Amber</option>
+              <option class="rag-status-red">Red</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="notes" class="col-lg-4 control-label">Notes</label>
+          <div class="col-lg-8">
+            <textarea class="form-control" rows="3" id="notes"></textarea>
+            <span class="help-block">Use this to add any additional information.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <div class="col-lg-8 col-lg-offset-3">
+          <a href="supplier-dashboard.html" class="btn btn-default">Cancel</a>
+          <a href="supplier-dashboard.html" class="btn btn-primary">Save</a>
         </div>
       </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingFour">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-             aria-controls="collapseFour">
-            Summary
-          </a>
-        </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
-        <div class="panel-body">
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="rag">Select RAG Status:</label>
-                <select class="form-control" class="form-control" rows="3" id="rag">
-                  <option>Blue</option>
-                  <option>Green</option>
-                  <option>Amber</option>
-                  <option>Red</option>
-                </select>
-              </div>
 
-              <div class="form-group">
-                <label for="textArea">Notes:</label>
-                <!--<div class="col-lg-10">-->
-                  <textarea class="form-control" rows="3" id="textArea"></textarea>
-                  <span class="help-block">Use this to add any additional information</span>
-                <!--</div>-->
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
-  <div>
-    <a class="btn btn-primary" href="supplier-dashboard.html">continue</a>
   </div>
   <footer class="container-fluid text-center">
 

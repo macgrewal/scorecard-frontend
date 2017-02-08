@@ -39,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Supplier X - January 2017</a>
+        <a class="navbar-brand" href="#"><img src="images/hmrc-logo.png" alt="HMRC Logo">Joint Partnership Dashboard</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
         <ul class="nav navbar-nav navbar-right">
@@ -50,163 +50,99 @@
   </nav>
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <ul class="breadcrumb">
-    <li><a href="supplier-dashboard.html">Dashboard</a></li>
+    <li><a href="supplier-select.html">Capgemini</a></li>
+    <li><a href="supplier-dashboard.html">January 2016 Dashboard</a></li>
     <li class="active">Value For Money</li>
   </ul>
   <h3>Value For Money - Innovation and value creation</h3>
-  <h5>Ensure that Partner innovation, thought leadership and account insight is being used to advance the transformation and delivery plans of HMRC.</h5>
-  <h5>Opportunities to invest, co-invest and co-deliver are being identified and progressed.</h5>
-  <h5>Broader technical capabilities of the partner are being offered and utilised where required.</h5>
+  <p class="lead">Ensure that Partner innovation, thought leadership and account insight is being used to advance the transformation and delivery plans of HMRC.</p>
+  <p class="lead">Opportunities to invest, co-invest and co-deliver are being identified and progressed.</p>
+  <p class="lead">Broader technical capabilities of the partner are being offered and utilised where required.</p>
   <br>
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Innovation Initiatives
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">
-          <h6>Responsiveness of commercial processes</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="ideas">Agreed number of ideas progressed against agreed plan:</label>
-                  <input type="text" class="form-control" id="ideas">
-                  <label for="value">Joint estimated value created by initiatives beyond Discovery:</label>
-                  <input type="text" class="form-control" id="value">
-                </div>
+  <div class="well bs-component">
 
-              </fieldset>
-            </form>
+    <form class="form-horizontal scores">
+
+      <fieldset>
+        <legend>Innovation Initiatives</legend>
+        <p class="lead">Responsiveness of commercial processes</p>
+        <div class="form-group">
+          <label for="i1_1" class="col-lg-4 control-label">Agreed number of ideas progressed against agreed plan</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i1_1" placeholder="0">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
-             aria-controls="collapseTwo">
-            Leveraging Capabilities
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-        <div class="panel-body">
-          <h6>Capability developed through leveraging wider partner organisation, the creation of new skills and skills transfer to promote a sustainable future for HMRC and ensure partner remains relevant</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="lev">Number of ideas leveraged from wider partner and it's supply chain:</label>
-                  <input type="text" class="form-control" id="lev">
-                </div>
-              </fieldset>
-            </form>
+        <div class="form-group">
+          <label for="i1_2" class="col-lg-4 control-label">Joint estimated value created by initiatives beyond discovery</label>
+          <div class="col-lg-8 input-group">
+            <div class="input-group-addon">&pound;</div>
+            <input type="text" class="form-control" id="1_2" placeholder="0.00">
+          </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Leveraging Capabilities</legend>
+        <p class="lead">Capability developed through leveraging wider partner organisation, the creation of new skills and skills transfer to promote a sustainable future for HMRC and ensure partner remains relevant.</p>
+        <div class="form-group">
+          <label for="i2_1" class="col-lg-4 control-label">Number of ideas leveraged from wider partner and it's supply chain</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="i2_1" placeholder="0">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingThree">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-             aria-controls="collapseThree">
-            Legacy Transformation
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-        <div class="panel-body">
-          <h6>Key Legacy transformation activities being progressed to help HMRC unlock savings and help achieve their strategic direction more readily</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="legacy">Number of agreed legacy transformation projects progressing beyond discovery:</label>
-                  <input type="text" class="form-control" id="legacy">
+      </fieldset>
 
-                </div>
-              </fieldset>
-
-            </form>
+      <fieldset>
+        <legend>Legacy Transformation</legend>
+        <p class="lead">Key Legacy transformation activities being progressed to help HMRC unlock savings and help achieve their strategic direction more readily</p>
+        <div class="form-group">
+          <label for="i3_1" class="col-lg-4 control-label">Number of agreed legacy transformation projects progressing beyond discovery</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="13_1">
           </div>
+        </div>
+      </fieldset>
 
+      <fieldset>
+        <legend>Collaboration</legend>
+        <p class="lead">Collaboration in innovating and driving optimum solutions, that could yield business value on HMRC's business priorities</p>
+        <div class="form-group">
+          <label for="i4_1" class="col-lg-4 control-label">Number of named interventions that have improved HMRC's solutions</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="14_1">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Summary</legend>
+        <p class="lead">Overall score for Capgemini</p>
+        <div class="form-group rag-status">
+          <label for="ragStatus" class="col-lg-4 control-label">Value of unbilled but approved items</label>
+          <div class="col-lg-8">
+            <select class="form-control" id="ragStatus">
+              <option class="rag-status-blue">Blue</option>
+              <option class="rag-status-green">Green</option>
+              <option class="rag-status-amber">Amber</option>
+              <option class="rag-status-red">Red</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="notes" class="col-lg-4 control-label">Notes</label>
+          <div class="col-lg-8">
+            <textarea class="form-control" rows="3" id="notes"></textarea>
+            <span class="help-block">Use this to add any additional information.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <div class="col-lg-8 col-lg-offset-3">
+          <a href="supplier-dashboard.html" class="btn btn-default">Cancel</a>
+          <a href="supplier-dashboard.html" class="btn btn-primary">Save</a>
         </div>
       </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingFour">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-             aria-controls="collapseFour">
-            Collaboration
-          </a>
-        </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-        <div class="panel-body">
-          <h6>Collaboration in innovating and driving optimum solutions, that could yield business value on HMRC's business priorities</h6>
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <fieldset>
-                <div class="form-group">
-                  <label for="inter">Number of named interventions that have improved HMRC's solutions:</label>
-                  <input type="text" class="form-control" id="inter">
 
-                </div>
-              </fieldset>
-
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingFive">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
-             aria-controls="collapseFive">
-            Summary
-          </a>
-        </h4>
-      </div>
-      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
-        <div class="panel-body">
-          <div class="panel-body">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="rag">Select RAG Status:</label>
-                <select class="form-control" class="form-control" rows="3" id="rag">
-                  <option>Blue</option>
-                  <option>Green</option>
-                  <option>Amber</option>
-                  <option>Red</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="textArea">Notes:</label>
-                <!--<div class="col-lg-10">-->
-                  <textarea class="form-control" rows="3" id="textArea"></textarea>
-                  <span class="help-block">Use this to add any additional information</span>
-                <!--</div>-->
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div>
-    <a class="btn btn-primary" href="supplier-dashboard.html">continue</a>
-  </div>
+    </form>
   <footer class="container-fluid text-center">
 
   </footer>
