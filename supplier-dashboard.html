@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body {
-        padding-top: 50px;
-        padding-bottom: 20px;
+            padding-top: 50px;
+            padding-bottom: 20px;
         }
     </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -56,259 +55,61 @@
             <li class="active">January 2016 Dashboard</li>
         </ul>
         <div class="container-fluid bg-3 text-center">
-
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <h3><a href="contract-management.html">Contract Management</a></h3>
-                    <div id="cmgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Contract Management</h3>
+                    <a href="contract-management.html">
+                        <div id="r1" data-gauge="green" data-gauge-description="Contract Management"></div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <h3><a href="value-for-money.html">Value For Money</a></h3>
-                    <div id="vfmgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Value For Money</h3>
+                    <a href="value-for-money.html">
+                        <div id="r2" data-gauge="green" data-gauge-description="Value For Money"></div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <h3><a href="delivery-services.html">Delivery - Services</a></h3>
-                    <div id="delservgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Delivery - Services</h3>
+                    <a href="delivery-services.html">
+                        <div id="r3" data-gauge="amber" data-gauge-description="Delivery - Services"></div>
+                    </a>
                 </div>
             </div>
         </div><br>
-
         <div class="container-fluid bg-3 text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <h3><a href="relationship.html">Relationship</a></h3>
-                    <div id="relgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Relationship</h3>
+                    <a href="relationship.html">
+                        <div id="r4" data-gauge="green" data-gauge-description="Relationship"></div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <h3><a href="assurance.html">Assurance</a></h3>
-                    <div id="assgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Assurance</h3>
+                    <a href="assurance.html">
+                        <div id="r5" data-gauge="red" data-gauge-description="Assurance"></div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <h3><a href="delivery-projects.html">Delivery - Projects</a></h3>
-                    <div id="delprojgauge"></div>
-                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3 class="sr-only">Delivery - Projects</h3>
+                    <a href="delivery-projects.html">
+                        <div id="r6" data-gauge="" data-gauge-description="Delivery - Projects"></div>
+                    </a>
                 </div>
             </div>
         </div><br><br>
-
         <footer class="container-fluid text-center">
         </footer>
     </div>
-
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
     <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/vendor/raphael-2.1.4.min.js"></script>
-    <!--<script src="js/vendor/justgage.1.0.1.min.js"></script>-->
     <script src="js/vendor/justgage.js"></script>
-    <script>
-
-            var cmgauge = new JustGage({
-                id: "cmgauge",
-                value: 75,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-                levelColorsGradient: false,
-                customSectors: {
-                    ranges: [{
-                        color: "#a9d70b",
-                        lo: 0,
-                        hi:25
-                    },{
-                        color: "green",
-                        lo: 26,
-                        hi:50
-                    },{
-                    color: "orange",
-                        lo: 51,
-                        hi:75
-                    },{
-                    color: "red",
-                        lo: 76,
-                        hi:100
-                    }]
-                },
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-            });
-
-            var vfmgauge = new JustGage({
-                id: "vfmgauge",
-                value: 100,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-            });
-
-        var relgauge = new JustGage({
-                id: "relgauge",
-                value: 50,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-            });
-
-        var delservgauge = new JustGage({
-                id: "delservgauge",
-                value: 75,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-            });
-
-        var delprojgauge = new JustGage({
-                id: "delprojgauge",
-                value: 0,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-
-            });
-
-            var assgauge = new JustGage({
-                id: "assgauge",
-                value: 50,
-                min: 0,
-                max: 100,
-                title: "",
-                label: "",
-                gaugeWidthScale: 0.65,
-
-                    pointer: true,
-                    pointerOptions: {
-                      toplength: -15,
-                      bottomlength: 10,
-                      bottomwidth: 12,
-                      color: '#8e8e93',
-                      stroke: '#ffffff',
-                      stroke_width: 3,
-                      stroke_linecap: 'round'
-                    },
-                    counter: false,
-                    donut: true,
-                    relativeGaugeSize: true,
-                    textRenderer: customValue,
-                    valueFontFamily: "Georgia"
-
-            });
-
-
-            function customValue(val) {
-            if (val == 0) {
-                return 'N/A';
-            } else if (val < 26) {
-                return 'blue';
-            } else if (val < 51) {
-                return 'green';
-            } else if (val < 76) {
-                return 'amber';
-            } else {
-                return 'red';
-            }
-        }
-
-    </script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
