@@ -9,19 +9,19 @@ $(document).ready(function () {
 
     switch (colour) {
       case '':
-        value = 0;
+        value = 100;
         break;
       case 'red':
-        value = 25;
+        value = 75;
         break;
       case 'amber':
         value = 50;
         break;
       case 'green':
-        value = 75;
+        value = 25;
         break;
       case 'blue':
-        value = 100;
+        value = 0;
         break;
     }
 

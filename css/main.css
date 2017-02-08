@@ -54,3 +54,7 @@ a:hover {
 .rag-status-amber { background-color: #ffe0b2 }
 .rag-status-green { background-color: #dff0d8 }
 .rag-status-blue { background-color: #77bef5 }
+
+.progress-bar-info {
+    background-color: #999;
+}
