@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Supplier X - January 2017</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signin.html">Joe bloggs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <ul class="breadcrumb">
+            <li><a href="supplier-select.html">Home</a></li>
+            <li class="active">Dashboard</li>
+        </ul>
+
+
+
+
+        <div class="container-fluid bg-3 text-center">
+
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3><a href="contract-management.html">Contract Management</a></h3>
+                    <div id="cmgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                </div>
+                <div class="col-md-4">
+                    <h3><a href="value-for-money.html">Value For Money</a></h3>
+                    <div id="vfmgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                </div>
+                <div class="col-md-4">
+                    <h3><a href="delivery-services.html">Delivery - Services</a></h3>
+                    <div id="delservgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                </div>
+            </div>
+        </div><br>
+
+        <div class="container-fluid bg-3 text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="relgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3><a href="relationship.html">Relationship</a></h3>
+                </div>
+                <div class="col-md-4">
+                    <div id="assgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3><a href="assurance.html">Assurance</a></h3>
+                </div>
+                <div class="col-md-4">
+                    <div id="delprojgauge"></div>
+                    <!--<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
+                    <h3><a href="delivery-projects.html">Delivery - Projects</a></h3>
+                </div>
+            </div>
+        </div><br><br>
+
+        <footer class="container-fluid text-center">
+        </footer>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/raphael-2.1.4.min.js"></script>
+    <!--<script src="js/vendor/justgage.1.0.1.min.js"></script>-->
+    <script src="js/vendor/justgage.js"></script>
+    <script>
+
+            var cmgauge = new JustGage({
+                id: "cmgauge",
+                value: 75,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+                levelColorsGradient: false,
+                customSectors: {
+                    ranges: [{
+                        color: "#a9d70b",
+                        lo: 0,
+                        hi:25
+                    },{
+                        color: "green",
+                        lo: 26,
+                        hi:50
+                    },{
+                    color: "orange",
+                        lo: 51,
+                        hi:75
+                    },{
+                    color: "red",
+                        lo: 76,
+                        hi:100
+                    }]
+                },
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+            });
+
+            var vfmgauge = new JustGage({
+                id: "vfmgauge",
+                value: 100,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+            });
+
+        var relgauge = new JustGage({
+                id: "relgauge",
+                value: 50,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+            });
+
+        var delservgauge = new JustGage({
+                id: "delservgauge",
+                value: 75,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+            });
+
+        var delprojgauge = new JustGage({
+                id: "delprojgauge",
+                value: 0,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+
+            });
+
+            var assgauge = new JustGage({
+                id: "assgauge",
+                value: 50,
+                min: 0,
+                max: 100,
+                title: "",
+                label: "",
+                gaugeWidthScale: 0.65,
+
+                    pointer: true,
+                    pointerOptions: {
+                      toplength: -15,
+                      bottomlength: 10,
+                      bottomwidth: 12,
+                      color: '#8e8e93',
+                      stroke: '#ffffff',
+                      stroke_width: 3,
+                      stroke_linecap: 'round'
+                    },
+                    counter: false,
+                    donut: true,
+                    relativeGaugeSize: true,
+                    textRenderer: customValue,
+                    valueFontFamily: "Georgia"
+
+            });
+
+
+            function customValue(val) {
+            if (val == 0) {
+                return 'N/A';
+            } else if (val < 26) {
+                return 'blue';
+            } else if (val < 51) {
+                return 'green';
+            } else if (val < 76) {
+                return 'amber';
+            } else {
+                return 'red';
+            }
+        }
+
+    </script>
+</body>
+</html>
