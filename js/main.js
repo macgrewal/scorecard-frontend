@@ -6,22 +6,24 @@ $(document).ready(function () {
     var colour = el.data('gauge');
     var description = el.data('gauge-description');
     var value = 0;
+    var displayColour = 'N/A';
 
     switch (colour) {
-      case '':
-        value = 100;
-        break;
       case 'red':
-        value = 75;
+        value = 24;
+        displayColour = 'Red';
         break;
       case 'amber':
-        value = 50;
+        value = 49;
+        displayColour = 'Amber';
         break;
       case 'green':
-        value = 25;
+        value = 74;
+        displayColour = 'Green';
         break;
       case 'blue':
-        value = 0;
+        value = 100;
+        displayColour = 'Blue';
         break;
     }
 
@@ -29,53 +31,42 @@ $(document).ready(function () {
       return "";
     }
 
-    var g = new JustGage({
-      id: id,
-      value: value,
-      title: description,
-      textRenderer: getLabel,
-      min: 0,
-      max: 100,
-      gaugeWidthScale: 0.65,
-      levelColorsGradient: true,
-      inverse: true,
-      reverse: true,
-      customSectors: {
-        ranges: [{
-          color: "#0000ff",
-          lo: 1,
-          hi: 25
-        }, {
-          color: "green",
-          lo: 26,
-          hi: 50
-        }, {
-          color: "orange",
-          lo: 51,
-          hi: 75
-        }, {
-          color: "red",
-          lo: 76,
-          hi: 100
-        }]
+    var chart = c3.generate({
+      bindto: '#' + id,
+      transition: {
+        duration: 500
       },
-      // reverse: true,
-      pointer: true,
-      pointerOptions: {
-        toplength: -15,
-        bottomlength: 10,
-        bottomwidth: 10,
-        color: '#8e8e93',
-        stroke: '#ffffff',
-        stroke_width: 2,
-        stroke_linecap: 'round'
+      data: {
+        columns: [
+          [description, 0]
+        ],
+        type: 'gauge'
       },
-      counter: false,
-      donut: true,
-      relativeGaugeSize: true,
-      textRenderer: getLabel,
-      valueFontFamily: "Georgia"
+      gauge: {
+        label: {
+          show: false
+        }
+      },
+      color: {
+        pattern: ['#e51c23', '#ff9800', '#4caf50', '#2196f3'], // the three color levels for the percentage values.
+        threshold: {
+          values: [25, 50, 75, 100]
+        }
+      },
+      legend: {
+        hide: true
+      },
+      onrendered: function () {
+        $('svg g.c3-chart > g.c3-chart-arcs > g > text', el).text(displayColour)
+      },
+      tooltip: {
+        show: false
+      }
     });
-
+    chart.load({
+      columns: [
+        [description, value]
+      ],
+    });
   });
 });
